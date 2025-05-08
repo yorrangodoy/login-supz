@@ -1,0 +1,36 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>SUPZ Login - Pagamento</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-900 text-white min-h-screen flex items-center justify-center">
+  <div class="bg-gray-800 p-6 rounded-xl shadow-xl w-full max-w-md text-center">
+    <h1 class="text-2xl font-bold mb-4">Escolha seu plano</h1>
+
+    <div class="mb-6">
+      <h2 class="text-xl font-semibold mb-2">🌍 Clientes internacionais (USD)</h2>
+      <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
+        <input type="hidden" name="cmd" value="_s-xclick">
+        <input type="hidden" name="hosted_button_id" value="COLE_SEU_ID_AQUI">
+        <button type="submit" class="bg-blue-500 hover:bg-blue-600 text-white px-6 py-2 rounded-lg transition">
+          Pagar com PayPal ($5)
+        </button>
+      </form>
+    </div>
+
+    <div>
+      <h2 class="text-xl font-semibold mb-2">🇧🇷 Clientes do Brasil (R$)</h2>
+      <a href="https://mpago.li/pAGAMENTO_AQUI" target="_blank" class="bg-green-500 hover:bg-green-600 text-white px-6 py-2 rounded-lg inline-block">
+        Pagar com Mercado Pago (R$15)
+      </a>
+    </div>
+
+    <p class="text-xs text-gray-400 mt-6">
+      Após o pagamento, o acesso será liberado automaticamente ou por e-mail.
+    </p>
+  </div>
+</body>
+</html>
